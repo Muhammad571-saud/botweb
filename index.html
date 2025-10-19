@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoBot - Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>KinoBot</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Enter movie code">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="movie-display" style="display: none;">
+            <h2 id="movie-title"></h2>
+            <p id="movie-type"></p>
+            <video id="movie-video" controls></video>
+        </div>
+    </main>
+
+    <footer>
+        <button id="admin-btn">Admin Panel</button>
+    </footer>
+
+    <!-- Admin Modal -->
+    <div id="admin-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Admin Panel</h2>
+            <input type="password" id="admin-password" placeholder="Enter password">
+            <button id="login-btn">Login</button>
+            <div id="admin-content" style="display: none;">
+                <h3>Upload Movie</h3>
+                <input type="file" id="video-file" accept="video/*">
+                <input type="text" id="movie-name" placeholder="Movie Name">
+                <input type="text" id="movie-code" placeholder="Movie Code">
+                <select id="movie-type-select">
+                    <option value="movie">Movie</option>
+                    <option value="cartoon">Cartoon</option>
+                </select>
+                <button id="publish-btn">Publish</button>
+
+                <h3>Delete Movie</h3>
+                <input type="text" id="delete-code" placeholder="Movie Code to Delete">
+                <button id="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
